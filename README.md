@@ -29,22 +29,45 @@ A reusable React-based recurring date picker component that allows users to sele
 
 ## 📦 Folder Structure
 
-📁 src/
+recurring-date-picker/
 │
-├── 📂 components/ # UI Components
-│ ├── RecurrenceTypeSelector.jsx
-│ ├── IntervalInput.jsx
-│ ├── WeekdaySelector.jsx
-│ ├── MonthlyPatternSelector.jsx
-│ ├── DateRangePicker.jsx
-│ ├── CalendarPreview.jsx
-│ └── tests/ # Test files
-│ └── RecurringDatePicker.test.js
+├── public/
+│   └── index.html
 │
-├── 📂 store/
-│ └── useRecurringStore.js # Zustand state management
+├── src/
+│   ├── assets/                  # Images, SVGs, etc.
+│   ├── components/              # UI components (modular + reusable)
+│   │   ├── RecurrenceSelector.jsx
+│   │   ├── RecurrenceInterval.jsx
+│   │   ├── WeeklySelector.jsx
+│   │   ├── MonthlyPatternSelector.jsx
+│   │   ├── DateRangePicker.jsx
+│   │   ├── CalendarPreview.jsx
+│   │   ├── SummaryDisplay.jsx
+│   │   └── SaveButton.jsx
+│   │
+│   ├── store/                   # Zustand store
+│   │   └── useRecurringStore.js
+│   │
+│   ├── utils/                   # Utility functions (e.g. summary generator, validation)
+│   │   └── summaryUtils.js
+│   │
+│   ├── hooks/                   # Custom React hooks (if needed)
+│   │   └── useDateUtils.js
+│   │
+│   ├── App.js                   # Main component
+│   ├── App.css                  # Global styles (if needed)
+│   ├── index.js                 # App entry point
+│   └── index.css                # Tailwind CSS or global styles
 │
-├── 📂 utils/
-│ └── recurrenceUtils.js # Logic for date calculations
+├── tests/                       # All unit/integration tests
+│   ├── App.test.js
+│   ├── RecurrenceSelector.test.js
+│   └── ...
 │
-└── App.jsx / index.jsx # Main entry component
+├── .gitignore
+├── README.md
+├── vite.config.js
+├── package.json
+└── package-lock.json
+
